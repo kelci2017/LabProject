@@ -16,7 +16,7 @@ public class UnitTests {
         RPAnnotationClass pRAnnotation = new RPAnnotationClass();
         for (StorageType storageType:StorageType.values()) {
             StorageErrorInfo storageErrorInfo = pRAnnotation.save(storageType);
-            if (storageErrorInfo == StorageErrorInfo.noError) {
+            if (storageErrorInfo == StorageErrorInfo.success) {
                 ISustainable data = pRAnnotation.retrieve(storageType);
                 if (data != null && data instanceof RPAnnotationClass) {
                         RPAnnotationClass instance = (RPAnnotationClass) data;
@@ -33,7 +33,7 @@ public class UnitTests {
         RPCommentClass pRComment = new RPCommentClass();
         for (StorageType storageType:StorageType.values()) {
             StorageErrorInfo storageErrorInfo = pRComment.save(storageType);
-            if (storageErrorInfo == StorageErrorInfo.noError) {
+            if (storageErrorInfo == StorageErrorInfo.success) {
                 ISustainable data = pRComment.retrieve(storageType);
                 if (data != null && data instanceof RPCommentClass) {
                         RPCommentClass instance = (RPCommentClass) data;

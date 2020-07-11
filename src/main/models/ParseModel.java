@@ -16,7 +16,7 @@ public class ParseModel {
             boolean successful = true;
 
             if (successful) {
-                return StorageErrorInfo.noError;
+                return StorageErrorInfo.success;
             }
             else {
                 return StorageErrorInfo.saveFailure;
