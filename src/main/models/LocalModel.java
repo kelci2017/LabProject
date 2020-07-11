@@ -11,7 +11,7 @@ public class LocalModel {
         } else {
             UserData.UserDefaults.replace(UserData.UserId, data);
         }
-        return StorageErrorInfo.noError;
+        return StorageErrorInfo.success;
     }
 
     public static ISustainable retrieve() {
