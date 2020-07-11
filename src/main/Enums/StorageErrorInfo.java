@@ -1,7 +1,7 @@
 package main.Enums;
 
 public enum StorageErrorInfo {
-    success("No error"),
+    noError("No error"),
     unrecognizedStorageType("Unrecognized storage type"),
     saveFailure("Save failure"),
     retrieveFailure("Retrieve failure");
