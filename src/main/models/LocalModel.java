@@ -1,7 +1,6 @@
 package main.models;
 
 import main.Enums.StorageErrorInfo;
-import main.base.ISustainable;
 import main.base.Sustainable;
 
 public class LocalModel {
@@ -12,7 +11,7 @@ public class LocalModel {
         } else {
             UserData.UserDefaults.replace(UserData.UserId, data);
         }
-        return StorageErrorInfo.success;
+        return StorageErrorInfo.noError;
     }
 
     public static Sustainable retrieve() {

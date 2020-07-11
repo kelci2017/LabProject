@@ -16,7 +16,7 @@ public class RESTfulModel {
             boolean successful = true;
 
             if (successful) {
-                return StorageErrorInfo.success;
+                return StorageErrorInfo.noError;
             }
             else {
                 return StorageErrorInfo.saveFailure;
