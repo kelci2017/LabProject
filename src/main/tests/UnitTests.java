@@ -2,11 +2,12 @@ package main.tests;
 
 import main.Enums.StorageErrorInfo;
 import main.Enums.StorageType;
-import main.base.ISustainable;
+import main.base.Sustainable;
 import main.classes.RPAnnotationClass;
 import main.classes.RPCommentClass;
 import org.junit.Test;
 
+import static main.Enums.StorageErrorInfo.*;
 import static org.junit.Assert.assertEquals;
 
 public class UnitTests {
@@ -16,8 +17,8 @@ public class UnitTests {
         RPAnnotationClass pRAnnotation = new RPAnnotationClass();
         for (StorageType storageType:StorageType.values()) {
             StorageErrorInfo storageErrorInfo = pRAnnotation.save(storageType);
-            if (storageErrorInfo == StorageErrorInfo.success) {
-                ISustainable data = pRAnnotation.retrieve(storageType);
+            if (storageErrorInfo == success) {
+                Sustainable data = pRAnnotation.retrieve(storageType);
                 if (data != null && data instanceof RPAnnotationClass) {
                         RPAnnotationClass instance = (RPAnnotationClass) data;
                         assertEquals(instance.annotation1, pRAnnotation.annotation1);
@@ -33,8 +34,8 @@ public class UnitTests {
         RPCommentClass pRComment = new RPCommentClass();
         for (StorageType storageType:StorageType.values()) {
             StorageErrorInfo storageErrorInfo = pRComment.save(storageType);
-            if (storageErrorInfo == StorageErrorInfo.success) {
-                ISustainable data = pRComment.retrieve(storageType);
+            if (storageErrorInfo == success) {
+                Sustainable data = pRComment.retrieve(storageType);
                 if (data != null && data instanceof RPCommentClass) {
                         RPCommentClass instance = (RPCommentClass) data;
                         assertEquals(instance.comment1, pRComment.comment1);

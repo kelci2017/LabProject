@@ -1,12 +1,12 @@
 package main.models;
 
 import main.Enums.StorageErrorInfo;
-import main.base.ISustainable;
+import main.base.Sustainable;
 
 public class ParseModel {
     static boolean simulate = true;
 
-    public static StorageErrorInfo save(ISustainable data) {
+    public static StorageErrorInfo save(Sustainable data) {
 
         if (simulate) {
             return LocalModel.save(data);
@@ -24,7 +24,7 @@ public class ParseModel {
         }
     }
 
-    public static ISustainable retrieve() {
+    public static Sustainable retrieve() {
 
         if (simulate) {
             return LocalModel.retrieve();
@@ -32,7 +32,7 @@ public class ParseModel {
         else { // real Parse API
 
             // call real Parse API to retrieve the data
-            ISustainable data = null;
+            Sustainable data = null;
             boolean successful = true;
 
             // when finished, dispatch the callback to main thread to make UI operation safe, if any

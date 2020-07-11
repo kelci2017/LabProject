@@ -1,8 +1,8 @@
 package main.classes;
 
-import main.base.ISustainable;
+import main.base.Sustainable;
 
-public class RPAnnotationClass implements ISustainable {
+public class RPAnnotationClass extends Sustainable {
 
     public boolean annotation1 = false;
     public int annotation2 = 2;

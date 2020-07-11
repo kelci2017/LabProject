@@ -2,9 +2,10 @@ package main.models;
 
 import main.Enums.StorageErrorInfo;
 import main.base.ISustainable;
+import main.base.Sustainable;
 
 public class LocalModel {
-    public static StorageErrorInfo save(ISustainable data) {
+    public static StorageErrorInfo save(Sustainable data) {
 
         if (UserData.UserDefaults.get(UserData.UserId) == null) {
             UserData.UserDefaults.put(UserData.UserId, data);
@@ -14,7 +15,7 @@ public class LocalModel {
         return StorageErrorInfo.success;
     }
 
-    public static ISustainable retrieve() {
+    public static Sustainable retrieve() {
 
         boolean successful = true;
 
