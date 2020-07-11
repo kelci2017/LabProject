@@ -3,7 +3,7 @@ package main.models;
 import main.Enums.StorageErrorInfo;
 import main.base.ISustainable;
 
-public class UserDefaultsModel {
+public class LocalModel {
     public static StorageErrorInfo save(ISustainable data) {
 
         if (UserData.UserDefaults.get(UserData.UserId) == null) {

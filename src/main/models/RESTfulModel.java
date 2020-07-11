@@ -9,7 +9,7 @@ public class RESTfulModel {
     public static StorageErrorInfo save(ISustainable data) {
 
         if (simulate) {
-            return UserDefaultsModel.save(data);
+            return LocalModel.save(data);
         }
         else { // real Parse API
 
@@ -27,7 +27,7 @@ public class RESTfulModel {
     public static ISustainable retrieve() {
 
         if (simulate) {
-            return UserDefaultsModel.retrieve();
+            return LocalModel.retrieve();
         }
         else { // real Parse API
 

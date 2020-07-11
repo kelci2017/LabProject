@@ -4,7 +4,7 @@ import main.Enums.StorageErrorInfo;
 import main.Enums.StorageType;
 import main.models.ParseModel;
 import main.models.RESTfulModel;
-import main.models.UserDefaultsModel;
+import main.models.LocalModel;
 
 // Any class conforming to Sustainable will be able to have
 //  - save
@@ -23,7 +23,7 @@ public interface ISustainable {
                 case restful:
                     return RESTfulModel.save(this);
                 case userDefaults:
-                    return UserDefaultsModel.save(this);
+                    return LocalModel.save(this);
                 default:
                     return StorageErrorInfo.unrecognizedStorageType;
             }
@@ -42,7 +42,7 @@ public interface ISustainable {
             case restful:
             return RESTfulModel.retrieve();
             case userDefaults:
-            return UserDefaultsModel.retrieve();
+            return LocalModel.retrieve();
             default:
                 return null;
         }
