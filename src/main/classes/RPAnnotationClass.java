@@ -12,7 +12,7 @@ public class RPAnnotationClass {
 
     }
 
-    public StorageErrorInfo saveToLocal() {
+    public StorageErrorInfo save() {
         try {
 
             if (UserData.AnnotationDefaults.get(UserData.UserId) == null) {

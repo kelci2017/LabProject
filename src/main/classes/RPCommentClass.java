@@ -12,7 +12,7 @@ public class RPCommentClass {
 
     }
 
-    public StorageErrorInfo saveToLocal() {
+    public StorageErrorInfo save() {
         try {
 
             if (UserData.CommentDefaults.get(UserData.UserId) == null) {
