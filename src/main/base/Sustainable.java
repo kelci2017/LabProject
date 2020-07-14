@@ -3,7 +3,6 @@ package main.base;
 import main.Enums.StorageErrorInfo;
 import main.Enums.StorageType;
 import main.models.LocalModel;
-import main.models.ParseModel;
 import main.models.RESTfulModel;
 
 public abstract class Sustainable {
@@ -11,8 +10,6 @@ public abstract class Sustainable {
         try {
 
             switch (storageType){
-                case parse:
-                    return ParseModel.save(this);
                 case restful:
                     return RESTfulModel.save(this);
                 case userDefaults:
@@ -30,8 +27,6 @@ public abstract class Sustainable {
     // asynchronous callback returns the class instance and error code
     public Sustainable retrieve(StorageType storageType){
         switch (storageType) {
-            case parse:
-                return ParseModel.retrieve();
             case restful:
                 return RESTfulModel.retrieve();
             case userDefaults:
