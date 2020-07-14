@@ -2,7 +2,6 @@ package main.base;
 
 import main.Enums.StorageErrorInfo;
 import main.Enums.StorageType;
-import main.models.ParseModel;
 import main.models.RESTfulModel;
 import main.models.LocalModel;
 
@@ -18,8 +17,6 @@ public interface ISustainable {
         try {
 
             switch (storageType){
-                case parse:
-                    return ParseModel.save(this);
                 case restful:
                     return RESTfulModel.save(this);
                 case userDefaults:
@@ -37,8 +34,6 @@ public interface ISustainable {
     // asynchronous callback returns the class instance and error code
     default ISustainable retrieve(StorageType storageType){
         switch (storageType) {
-            case parse:
-            return ParseModel.retrieve();
             case restful:
             return RESTfulModel.retrieve();
             case userDefaults:
