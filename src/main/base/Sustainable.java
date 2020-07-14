@@ -12,7 +12,7 @@ public abstract class Sustainable {
             switch (storageType){
                 case restful:
                     return RESTfulModel.save(this);
-                case userDefaults:
+                case Local:
                     return LocalModel.save(this);
                 default:
                     return StorageErrorInfo.unrecognizedStorageType;
@@ -29,7 +29,7 @@ public abstract class Sustainable {
         switch (storageType) {
             case restful:
                 return RESTfulModel.retrieve();
-            case userDefaults:
+            case Local:
                 return LocalModel.retrieve();
             default:
                 return null;
